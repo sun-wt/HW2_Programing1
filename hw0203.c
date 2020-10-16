@@ -5,44 +5,86 @@ int main()
   int salary;
   printf("Gross salary:");
   scanf("%d",&salary);
+  if(salary<0)
+  {
+    printf("error\n");
+    return 0;
+  }
   scanf("%c",&aaaa);
   
   int marry;
   printf("Married(0/1):");
   scanf("%d",&marry);
+  if(marry!=0||marry!=1) 
+  {
+    printf("error\n");
+    return 0;
+  }
   scanf("%c",&aaaa);
+  
  
 
   int member;
   printf("How many people are there in your family:");
   scanf("%d",&member);
+  if(member<0) 
+  {
+    printf("error\n");
+    return 0;
+  }
   scanf("%c",&aaaa);
  
 
   int income;
   printf("How many people in your family have income:");
   scanf("%d",&income);
+  if(income<0||income>member) 
+  {
+    printf("error\n");
+    return 0;
+  }
   scanf("%c",&aaaa);
 
   int SI;
   printf("Secial Deduction for Savings and Investment:");
   scanf("%d",&SI);
+  if(SI<0||SI>member) 
+  {
+    printf("error\n");
+    return 0;
+  }
   scanf("%c",&aaaa);
 
   int T;
   printf("Secial Deduction for Tuition:");
   scanf("%d",&T);
+  if(T<0||T>member) 
+  {
+    printf("error\n");
+    return 0;
+  }
   scanf("%c",&aaaa);
 
   int children;
   printf("How many preschool children:");
   scanf("%d",&children);
+  if(children<0||children>member) 
+  {
+    printf("error\n");
+    return 0;
+  }
   scanf("%c",&aaaa);
 
 
   int disable;
   printf("How many disable people:");
+  
   scanf("%d",& disable);
+  if(disable<0||disable>member) 
+  {
+    printf("error\n");
+    return 0;
+  }
   scanf("%c",&aaaa);
 
   float x=salary-(marry+1)*120000-member*88000-income*200000-SI*270000
