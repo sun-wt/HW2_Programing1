@@ -23,9 +23,11 @@ int main()
   char P[4]={'A','B','C','D'};
   int Pn[13]={1,2,3,4,5,6,7,8,9,10,11,12,13};
   int p=0;
-  for(int i=0;i<=4;i++){
+  for(int i=0;i<=4;i++)
+  {
     p=0;
-    while(N[i]>13){
+    while(N[i]>13)
+    {
       N[i]=N[i]-13;
       p=p+1;
     }
@@ -34,10 +36,14 @@ int main()
   }
  
   int Answer[5]={0,0,0,0,0};
-  for(int j=0;j<13;j++){
-    for(int k=0;k<5;k++){
-      if(Pn[j]==B[k]){
-        for(int l=0;l<5;l++){
+  for(int j=0;j<13;j++)
+  {
+    for(int k=0;k<5;k++)
+    {
+      if(Pn[j]==B[k])
+      {
+        for(int l=0;l<5;l++)
+        {
           if(Answer[l]==0){
             Answer[l]=Pn[j];
             break;
@@ -48,7 +54,7 @@ int main()
   }
   
 
-  //condition1
+  //condition1 <same kind>
   int c1=0;
   if((A[0]==P[0] && A[1]==P[0] && A[2]==P[0] && A[3]==P[0] && A[4]==P[0])||
      (A[0]==P[1] && A[1]==P[1] && A[2]==P[1] && A[3]==P[1] && A[4]==P[1])||
@@ -58,54 +64,66 @@ int main()
     c1=1;
   }
 
-  //condition2
+  //condition2 <generalized stright>
   int c2=0;
   int in=Answer[0]; 
   if(Answer[1]==in+1 && Answer[2]==in+2 && Answer[3]==in+3 &&
-Answer[4]==in+4){
+     Answer[4]==in+4)
+  {
     c2=1;
   }
-  else if(Answer[0]==10 && Answer[1]==11 && Answer[2]==12 && Answer[3]==13 && Answer[4]==1){
+  else if(Answer[0]==10 && Answer[1]==11 && 
+          Answer[2]==12 && Answer[3]==13 && Answer[4]==1)
+  {
     c2=1;
   }
 
-  //condition3
+  //condition3 <same number*4>
   int c3=0;
-  if(Answer[0]==Answer[3]||Answer[1]==Answer[4]){
+  if(Answer[0]==Answer[3]||Answer[1]==Answer[4])
+  {
     c3=1;
   }
 
-  //condition4 
+  //condition4 <full house>
   int c4=0;
-  if(Answer[0]==Answer[2] && Answer[3]==Answer[4]){
+  if(Answer[0]==Answer[2] && Answer[3]==Answer[4])
+  {
     c4=1;
   }
-  else if(Answer[2]==Answer[4] && Answer[0]==Answer[1]){
+  else if(Answer[2]==Answer[4] && Answer[0]==Answer[1])
+  {
     c4=1;
   }
   
-  //condition5
+  //condition5 <three of a kind>
   int c5=0;
-  if(Answer[1]==Answer[3]){
+  if(Answer[1]==Answer[3]||
+     Answer[0]==Answer[2] && Answer[2]!=Answer[3] && Answer[3]!=Answer[4]
+     Answer[2]==Answer[4] && Answer[1]!=Answer[2] && Answer[2]!=Answer[3])
+  {
     c5=1;
   }
 
-  //condition6
+  //condition6 <two pair>
   int c6=0;
-  if(Answer[0]==Answer[1] && Answer[2]==Answer[3] && 
-      Answer[4]!=Answer[3]){
+  if(Answer[0]==Answer[1] && Answer[2]==Answer[3] 
+     &&Answer[4]!=Answer[3])
+  {
     c6=1;
   }
   else if(Answer[0]==Answer[1] && Answer[3]==Answer[4] &&
-           Answer[2]!=Answer[3] && Answer[2]!=Answer[1]){
+           Answer[2]!=Answer[3] && Answer[2]!=Answer[1])
+  {
     c6=1;
   }
   else if(Answer[1]==Answer[2] && Answer[3]==Answer[4] &&
-           Answer[0]!=Answer[1]){
+           Answer[0]!=Answer[1])
+  {
     c6=1;
   }
  
-  //condition7
+  //condition7 <one pair>
   int c7=0;
   if(Answer[0]==Answer[1] && Answer[1]!=Answer[0] && 
       Answer[2]!=Answer[3] && Answer[3]!=Answer[4]){

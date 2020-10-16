@@ -7,7 +7,7 @@ int main()
   scanf("%d",&salary);
   if(salary<0)
   {
-    printf("error\n");
+    printf("error for salary\n");
     return 0;
   }
   scanf("%c",&aaaa);
@@ -17,7 +17,7 @@ int main()
   scanf("%d",&marry);
   if(marry!=0||marry!=1) 
   {
-    printf("error\n");
+    printf("error for married\n");
     return 0;
   }
   scanf("%c",&aaaa);
@@ -29,7 +29,7 @@ int main()
   scanf("%d",&member);
   if(member<0) 
   {
-    printf("error\n");
+    printf("error for member\n");
     return 0;
   }
   scanf("%c",&aaaa);
@@ -40,7 +40,7 @@ int main()
   scanf("%d",&income);
   if(income<0||income>member) 
   {
-    printf("error\n");
+    printf("error for earners\n");
     return 0;
   }
   scanf("%c",&aaaa);
@@ -48,9 +48,9 @@ int main()
   int SI;
   printf("Secial Deduction for Savings and Investment:");
   scanf("%d",&SI);
-  if(SI<0||SI>member) 
+  if(SI<0||SI>1) 
   {
-    printf("error\n");
+    printf("error for Savings and Investment\n");
     return 0;
   }
   scanf("%c",&aaaa);
@@ -60,7 +60,7 @@ int main()
   scanf("%d",&T);
   if(T<0||T>member) 
   {
-    printf("error\n");
+    printf("error for Tuition\n");
     return 0;
   }
   scanf("%c",&aaaa);
@@ -70,7 +70,7 @@ int main()
   scanf("%d",&children);
   if(children<0||children>member) 
   {
-    printf("error\n");
+    printf("error for preschool children\n");
     return 0;
   }
   scanf("%c",&aaaa);
@@ -82,7 +82,7 @@ int main()
   scanf("%d",& disable);
   if(disable<0||disable>member) 
   {
-    printf("error\n");
+    printf("error for disable people\n");
     return 0;
   }
   scanf("%c",&aaaa);
