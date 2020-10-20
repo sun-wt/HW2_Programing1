@@ -125,7 +125,7 @@ int main()
  
   //condition7 <one pair>
   int c7=0;
-  if(Answer[0]==Answer[1] && Answer[1]!=Answer[0] && 
+  if(Answer[0]==Answer[1] && Answer[1]!=Answer[2] && 
       Answer[2]!=Answer[3] && Answer[3]!=Answer[4]){
     c7=1;
   }
