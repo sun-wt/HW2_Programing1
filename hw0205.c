@@ -98,9 +98,9 @@ int main()
   
   //condition5 <three of a kind>
   int c5=0;
-  if(Answer[1]==Answer[3]||
-     Answer[0]==Answer[2] && Answer[2]!=Answer[3] && Answer[3]!=Answer[4]
-     Answer[2]==Answer[4] && Answer[1]!=Answer[2] && Answer[2]!=Answer[3])
+  if((Answer[1]==Answer[3])||
+     (Answer[0]==Answer[2] && Answer[2]!=Answer[3] && Answer[3]!=Answer[4])||
+     (Answer[2]==Answer[4] && Answer[1]!=Answer[2] && Answer[2]!=Answer[3]))
   {
     c5=1;
   }
